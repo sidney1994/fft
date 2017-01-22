@@ -1,0 +1,29 @@
+from __future__ import division
+import numpy as np
+import matplotlib as plt
+import math
+
+infile=open('C:\\Users\\123\\Desktop\\Record40.txt',"r")
+outfile=open("C:\\Users\\123\\Desktop\\fft.txt","a")
+a=[0]*441000
+i=0
+for line in infile:
+    a[i]=line
+    
+    i=i+1
+a=np.array(a)
+af=np.fft.fft(a)
+absaf=abs(af)
+print absaf[441000-2]
+#for i in range(0,441000):
+    #print absaf[i]
+
+#for i in range(0,440999):
+#    awrite=absaf[i]
+    
+#    awrite=str(awrite)
+#    outfile.write(awrite)
+    
+outfile.close()
+infile.close()
+
