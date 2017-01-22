@@ -15,14 +15,14 @@ a=np.array(a)
 af=np.fft.fft(a)
 absaf=abs(af)
 print absaf[441000-2]
-#for i in range(0,441000):
-    #print absaf[i]
+for i in range(0,441000):
+    print absaf[i]
 
-#for i in range(0,440999):
-#    awrite=absaf[i]
+for i in range(0,440999):
+    awrite=absaf[i]
     
-#    awrite=str(awrite)
-#    outfile.write(awrite)
+    awrite=str(awrite)
+    outfile.write(awrite)
     
 outfile.close()
 infile.close()
